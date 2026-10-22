@@ -1,3 +1,4 @@
+
 # Secret configuration files
 backend/config/config.php
 backend/config/*.local.php

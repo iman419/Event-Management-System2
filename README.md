@@ -43,7 +43,7 @@ See [`docs/ERD.md`](docs/ERD.md) for the draft entity-relationship diagram.
 
 **Milestone 1 — Setup, Static Frontend, and ERD**
 
-The project repository, initial documentation, folder structure, static frontend prototype, and draft ERD are being prepared.
+The initial repository structure, project documentation, static frontend prototype, and draft ERD have been created. The frontend is being tested, and final milestone checks are still in progress.
 
 ## External API
 
