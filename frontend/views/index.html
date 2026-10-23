@@ -15,7 +15,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home" data-view="home">EventHub</a>
+            <a class="navbar-brand fw-bold" href="#home" data-view="home">
+                EventHub
+            </a>
 
             <button
                 class="navbar-toggler"
@@ -31,339 +33,45 @@
 
             <div class="collapse navbar-collapse" id="mainNavigation">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home" data-view="home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#events" data-view="events">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#categories" data-view="categories">Categories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#dashboard" data-view="dashboard">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#registrations" data-view="registrations">My Registrations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#profile" data-view="profile">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#login" data-view="login">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#register" data-view="register">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#admin" data-view="admin">Admin</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-view="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events" data-view="events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories" data-view="categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dashboard" data-view="dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registrations" data-view="registrations">My Registrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile" data-view="profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#login" data-view="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#register" data-view="register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#admin" data-view="admin">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#weather" data-view="weather">Weather</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main class="container py-4">
-
-        <section id="home" class="app-view">
-            <div class="hero-section rounded-4 py-5 px-3 text-center">
-                <div class="container py-4">
-                    <p class="text-uppercase fw-bold">Discover something new</p>
-                    <h1 class="display-4 fw-bold">Find Your Next Great Event</h1>
-                    <p class="lead mt-3">
-                        Discover events, explore new interests and connect with your community.
-                    </p>
-                    <button class="btn btn-primary btn-lg mt-3" data-view="events">
-                        Explore Events
-                    </button>
-                </div>
-            </div>
-
-            <div class="py-5">
-                <h2>Upcoming Events</h2>
-                <p class="text-secondary">Explore events you might enjoy.</p>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card event-card h-100">
-                            <div class="card-body">
-                                <span class="badge text-bg-primary mb-3">Technology</span>
-                                <h3 class="h5">Tech & Innovation Meetup</h3>
-                                <p>Meet people interested in technology and innovation.</p>
-                                <p class="text-secondary">Date: To be announced</p>
-                                <button class="btn btn-outline-primary" data-view="event-details">View Details</button>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card event-card h-100">
-                            <div class="card-body">
-                                <span class="badge text-bg-success mb-3">Education</span>
-                                <h3 class="h5">Learning Workshop</h3>
-                                <p>Develop your skills and learn something new.</p>
-                                <p class="text-secondary">Date: To be announced</p>
-                                <button class="btn btn-outline-primary" data-view="event-details">View Details</button>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card event-card h-100">
-                            <div class="card-body">
-                                <span class="badge text-bg-warning mb-3">Community</span>
-                                <h3 class="h5">Community Gathering</h3>
-                                <p>Connect with people and discover local activities.</p>
-                                <p class="text-secondary">Date: To be announced</p>
-                                <button class="btn btn-outline-primary" data-view="event-details">View Details</button>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <p class="small text-secondary mt-3">
-                    These are sample cards for the static frontend, not real event records.
-                </p>
-            </div>
-        </section>
-
-        <section id="events" class="app-view d-none">
-            <h1>All Events</h1>
-            <p class="text-secondary">Browse the available events. Sample content for Milestone 1.</p>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <article class="card event-card h-100">
-                        <div class="card-body">
-                            <span class="badge text-bg-primary">Technology</span>
-                            <h2 class="h4 mt-3">Tech & Innovation Meetup</h2>
-                            <p>A meetup for technology enthusiasts and innovators.</p>
-                            <p><strong>Date:</strong> To be announced</p>
-                            <p><strong>Venue:</strong> To be announced</p>
-                            <button class="btn btn-primary" data-view="event-details">View Details</button>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="card event-card h-100">
-                        <div class="card-body">
-                            <span class="badge text-bg-success">Education</span>
-                            <h2 class="h4 mt-3">Learning Workshop</h2>
-                            <p>A workshop for people who want to learn new skills.</p>
-                            <p><strong>Date:</strong> To be announced</p>
-                            <p><strong>Venue:</strong> To be announced</p>
-                            <button class="btn btn-primary" data-view="event-details">View Details</button>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="card event-card h-100">
-                        <div class="card-body">
-                            <span class="badge text-bg-warning">Community</span>
-                            <h2 class="h4 mt-3">Community Gathering</h2>
-                            <p>An opportunity to connect with your local community.</p>
-                            <p><strong>Date:</strong> To be announced</p>
-                            <p><strong>Venue:</strong> To be announced</p>
-                            <button class="btn btn-primary" data-view="event-details">View Details</button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="event-details" class="app-view d-none">
-            <h1>Event Details</h1>
-            <article class="card event-card mt-4">
-                <div class="card-body p-4">
-                    <span class="badge text-bg-primary">Technology</span>
-                    <h2 class="mt-3">Tech & Innovation Meetup</h2>
-                    <p>Join other participants to discuss technology, innovation and new ideas.</p>
-                    <p><strong>Date and time:</strong> To be announced</p>
-                    <p><strong>Venue:</strong> To be announced</p>
-                    <p><strong>Category:</strong> Technology</p>
-                    <p>This is sample information for the static prototype.</p>
-                    <button class="btn btn-primary" data-view="registrations">Register for Event</button>
-                    <button class="btn btn-outline-secondary ms-2" data-view="events">Back to Events</button>
-                </div>
-            </article>
-            <div class="mt-4">
-                <h3>Reviews</h3>
-                <p class="text-secondary">Event reviews will be available when the backend is implemented.</p>
-            </div>
-        </section>
-
-        <section id="categories" class="app-view d-none">
-            <h1>Explore Categories</h1>
-            <p class="text-secondary">Browse events by category.</p>
-            <div class="row g-3 mt-2">
-                <div class="col-6 col-md-3"><div class="category-item p-4 rounded">Technology</div></div>
-                <div class="col-6 col-md-3"><div class="category-item p-4 rounded">Education</div></div>
-                <div class="col-6 col-md-3"><div class="category-item p-4 rounded">Music</div></div>
-                <div class="col-6 col-md-3"><div class="category-item p-4 rounded">Community</div></div>
-            </div>
-        </section>
-
-        <section id="dashboard" class="app-view d-none">
-            <h1>Dashboard</h1>
-            <p class="text-secondary">A summary of your event activity.</p>
-            <div class="row g-3 mt-2">
-                <div class="col-md-4">
-                    <div class="card h-100"><div class="card-body">
-                        <h2 class="h5">Upcoming Events</h2><p>Explore events you may want to attend.</p>
-                        <button class="btn btn-outline-primary" data-view="events">Browse Events</button>
-                    </div></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100"><div class="card-body">
-                        <h2 class="h5">My Registrations</h2><p>Review your event registrations.</p>
-                        <button class="btn btn-outline-primary" data-view="registrations">View Registrations</button>
-                    </div></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100"><div class="card-body">
-                        <h2 class="h5">My Profile</h2><p>View your profile information.</p>
-                        <button class="btn btn-outline-primary" data-view="profile">Open Profile</button>
-                    </div></div>
-                </div>
-            </div>
-            <p class="small text-secondary mt-3">Dashboard data is illustrative only; no user account is connected.</p>
-        </section>
-
-        <section id="registrations" class="app-view d-none">
-            <h1>My Registrations</h1>
-            <p class="text-secondary">This page will display the events a user has registered for.</p>
-            <div class="table-responsive mt-4">
-                <table class="table table-striped align-middle">
-                    <thead><tr><th>Event</th><th>Date</th><th>Status</th></tr></thead>
-                    <tbody>
-                        <tr><td>Sample Event</td><td>To be announced</td><td><span class="badge text-bg-secondary">Example only</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <button class="btn btn-primary" data-view="events">Find Events</button>
-            <p class="small text-secondary mt-3">No real registrations are stored in this prototype.</p>
-        </section>
-
-        <section id="profile" class="app-view d-none">
-            <h1>My Profile</h1>
-            <p class="text-secondary">Profile preview for a registered user.</p>
-            <div class="card mt-4">
-                <div class="card-body">
-                    <h2 class="h5">User Information</h2>
-                    <p><strong>Name:</strong> Sample User</p>
-                    <p><strong>Email:</strong> user@example.com</p>
-                    <p><strong>Role:</strong> User</p>
-                    <p class="small text-secondary">Example information only; no actual account is connected.</p>
-                    <button class="btn btn-outline-primary" data-view="login">Login</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="login" class="app-view d-none">
-            <div class="row justify-content-center">
-                <div class="col-md-7 col-lg-5">
-                    <h1 class="mb-3">Login</h1>
-                    <form id="loginForm">
-                        <div class="mb-3">
-                            <label for="loginEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="loginEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="loginPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="loginPassword" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
-                    <p class="small text-secondary mt-2">Static preview only. Authentication will be implemented later.</p>
-                    <p>Don't have an account? <a href="#register" data-view="register">Register</a></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="register" class="app-view d-none">
-            <div class="row justify-content-center">
-                <div class="col-md-7 col-lg-5">
-                    <h1 class="mb-3">Create an Account</h1>
-                    <form id="registerForm">
-                        <div class="mb-3">
-                            <label for="registerName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="registerName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="registerEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="registerEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="registerPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="registerPassword" required>
-                        </div>
-                        <button type="submit" class="btn btn-success">Register</button>
-                    </form>
-                    <p class="small text-secondary mt-2">Static preview only. Registration will be implemented later.</p>
-                    <p>Already have an account? <a href="#login" data-view="login">Login</a></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="admin" class="app-view d-none">
-            <h1>Administration</h1>
-            <p class="text-secondary">Static preview of the administration area. Admin access is not implemented yet.</p>
-            <div class="row g-4 mt-1">
-                <div class="col-md-4">
-                    <div class="card h-100"><div class="card-body">
-                        <h2 class="h5">Manage Events</h2>
-                        <p>Create, review, update and remove event records in a later milestone.</p>
-                        <button class="btn btn-outline-primary" data-view="admin-events">Open Event Management</button>
-                    </div></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100"><div class="card-body">
-                        <h2 class="h5">Manage Categories</h2>
-                        <p>Review and organize event categories.</p>
-                        <button class="btn btn-outline-primary" data-view="admin-categories">Open Categories</button>
-                    </div></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100"><div class="card-body">
-                        <h2 class="h5">Manage Venues</h2>
-                        <p>Review and organize event locations.</p>
-                        <button class="btn btn-outline-primary" data-view="admin-venues">Open Venues</button>
-                    </div></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="admin-events" class="app-view d-none">
-            <h1>Manage Events</h1>
-            <p class="text-secondary">Static administration preview; event changes are not saved.</p>
-            <form id="eventForm" class="card card-body mt-4">
-                <div class="mb-3">
-                    <label for="eventTitle" class="form-label">Event Title</label>
-                    <input id="eventTitle" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="eventDescription" class="form-label">Description</label>
-                    <textarea id="eventDescription" class="form-control" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Preview Event</button>
-            </form>
-            <button class="btn btn-outline-secondary mt-3" data-view="admin">Back to Administration</button>
-        </section>
-
-        <section id="admin-categories" class="app-view d-none">
-            <h1>Manage Categories</h1>
-            <p class="text-secondary">Category management preview.</p>
-            <ul class="list-group mt-4">
-                <li class="list-group-item">Technology</li>
-                <li class="list-group-item">Education</li>
-                <li class="list-group-item">Music</li>
-                <li class="list-group-item">Community</li>
-            </ul>
-            <button class="btn btn-outline-secondary mt-3" data-view="admin">Back to Administration</button>
-        </section>
-
-        <section id="admin-venues" class="app-view d-none">
-            <h1>Manage Venues</h1>
-            <p class="text-secondary">Venue management preview.</p>
-            <div class="table-responsive mt-4">
-                <table class="table table-striped">
-                    <thead><tr><th>Venue</th><th>Address</th><th>City</th></tr></thead>
-                    <tbody><tr><td>Sample Venue</td><td>To be announced</td><td>To be announced</td></tr></tbody>
-                </table>
-            </div>
-            <button class="btn btn-outline-secondary mt-3" data-view="admin">Back to Administration</button>
-        </section>
-
-        <section id="weather" class="app-view">
-            <h1>Event Weather</h1>
-            <p class="text-secondary">
-                Planned external API feature: weather information for an event's location and date.
-            </p>
-            <div class="card">
-                <div class="card-body">
-                    <p>Weather information will be added after the external API is selected and integrated.</p>
-                    <p class="small text-secondary mb-0">No external weather data is retrieved in Milestone 1.</p>
-                </div>
-            </div>
-        </section>
-
+        <div id="view-container" aria-live="polite">
+            <p class="text-secondary">Loading page...</p>
+        </div>
     </main>
 
     <footer class="bg-dark text-white py-4 mt-4">

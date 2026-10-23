@@ -1,0 +1,75 @@
+
+<section id="admin-events">
+    <h1>Manage Events</h1>
+    <p class="text-secondary">Preview of the event management form.</p>
+
+    <div class="card mt-4" style="max-width: 720px;">
+        <div class="card-body p-4">
+            <form id="eventForm">
+                <div class="mb-3">
+                    <label for="eventTitle" class="form-label">Event Title</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="eventTitle"
+                        name="title"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="eventDescription" class="form-label">Description</label>
+                    <textarea
+                        class="form-control"
+                        id="eventDescription"
+                        name="description"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="eventCategory" class="form-label">Category</label>
+                    <select class="form-select" id="eventCategory" name="category" required>
+                        <option value="">Choose a category</option>
+                        <option value="technology">Technology</option>
+                        <option value="education">Education</option>
+                        <option value="music">Music</option>
+                        <option value="community">Community</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="eventDate" class="form-label">Date and Time</label>
+                    <input
+                        type="datetime-local"
+                        class="form-control"
+                        id="eventDate"
+                        name="date"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="eventVenue" class="form-label">Venue</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="eventVenue"
+                        name="venue"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save Event</button>
+                <button type="button" class="btn btn-outline-secondary ms-2" data-view="admin">
+                    Back to Admin
+                </button>
+            </form>
+
+            <p class="small text-secondary mt-3 mb-0">
+                Static preview only. Events are not saved to a database.
+            </p>
+        </div>
+    </div>
+</section>

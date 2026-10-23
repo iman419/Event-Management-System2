@@ -1,33 +1,123 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    const views = document.querySelectorAll(".app-view");
+    const viewContainer = document.querySelector("#view-container");
     const navigation = document.querySelector("#mainNavigation");
 
-    function showView(viewId) {
-        const targetView = document.getElementById(viewId);
+    const validViews = [
+        "home",
+        "events",
+        "event-details",
+        "categories",
+        "dashboard",
+        "registrations",
+        "profile",
+        "login",
+        "register",
+        "admin",
+        "admin-events",
+        "admin-categories",
+        "admin-venues",
+        "weather"
+    ];
 
-        if (!targetView || !targetView.classList.contains("app-view")) {
-            return;
-        }
+    async function showView(viewId) {
+        const selectedView = validViews.includes(viewId) ? viewId : "home";
 
-        views.forEach((view) => {
-            view.classList.toggle("d-none", view !== targetView);
-        });
+        try {
+            const response = await fetch(`./${selectedView}.html`);
 
-        document.querySelectorAll("[data-view]").forEach((link) => {
-            if (link.classList.contains("nav-link")) {
+            if (!response.ok) {
+                throw new Error(`Could not load ${selectedView}.html`);
+            }
+
+            const html = await response.text();
+            viewContainer.innerHTML = html;
+
+            document.querySelectorAll(".navbar [data-view]").forEach((link) => {
                 link.classList.toggle(
                     "active",
-                    link.dataset.view === viewId
+                    link.dataset.view === selectedView
                 );
+            });
+
+            if (
+                navigation &&
+                navigation.classList.contains("show") &&
+                window.bootstrap
+            ) {
+                window.bootstrap.Collapse
+                    .getOrCreateInstance(navigation)
+                    .hide();
             }
-        });
 
-        if (navigation && navigation.classList.contains("show")) {
-            bootstrap.Collapse.getOrCreateInstance(navigation).hide();
+            bindForms();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        } catch (error) {
+            console.error("View loading error:", error);
+
+            viewContainer.innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    <h1 class="h4">Unable to load this page</h1>
+                    <p class="mb-0">
+                        Please check that the view file exists in
+                        <code>frontend/views/</code> and reload the page.
+                    </p>
+                </div>
+            `;
         }
+    }
 
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    function bindForms() {
+        const forms = viewContainer.querySelectorAll("form");
+
+        forms.forEach((form) => {
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                if (form.id === "eventForm") {
+                    alert(
+                        "Static preview only. The event has not been saved."
+                    );
+                    return;
+                }
+
+                if (form.id === "categoryForm") {
+                    alert(
+                        "Static preview only. The category has not been saved."
+                    );
+                    return;
+                }
+
+                if (form.id === "venueForm") {
+                    alert(
+                        "Static preview only. The venue has not been saved."
+                    );
+                    return;
+                }
+
+                if (form.id === "loginForm") {
+                    alert(
+                        "Static prototype only. Login is not connected to a backend."
+                    );
+                    return;
+                }
+
+                if (form.id === "registerForm") {
+                    alert(
+                        "Static prototype only. Account creation is not connected to a backend."
+                    );
+                    return;
+                }
+
+                alert(
+                    "Static prototype only. This form is not connected to a backend."
+                );
+            });
+        });
     }
 
     document.addEventListener("click", (event) => {
@@ -38,35 +128,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const viewId = link.dataset.view;
-        const targetView = document.getElementById(viewId);
 
-        if (!targetView || !targetView.classList.contains("app-view")) {
+        if (!validViews.includes(viewId)) {
             return;
         }
 
         event.preventDefault();
-        history.pushState({ viewId }, "", `#${viewId}`);
+
+        if (window.location.hash !== `#${viewId}`) {
+            window.history.pushState(
+                { viewId },
+                "",
+                `#${viewId}`
+            );
+        }
+
         showView(viewId);
     });
 
     window.addEventListener("popstate", () => {
         const viewId = window.location.hash.slice(1) || "home";
         showView(viewId);
-    });
-
-    document.querySelectorAll("form").forEach((form) => {
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            if (form.id === "eventForm") {
-                alert("Static preview only. The event has not been saved.");
-                return;
-            }
-
-            alert(
-                "Static prototype only. This form is not connected to a backend."
-            );
-        });
     });
 
     const initialView = window.location.hash.slice(1) || "home";
