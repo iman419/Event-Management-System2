@@ -1,0 +1,57 @@
+
+<section id="register">
+    <h1>Create Account</h1>
+    <p class="text-secondary">Register to discover and join events.</p>
+
+    <div class="card mt-4" style="max-width: 520px;">
+        <div class="card-body p-4">
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="registerName" class="form-label">Full Name</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="registerName"
+                        name="name"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="registerEmail" class="form-label">Email address</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="registerEmail"
+                        name="email"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Password</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="registerPassword"
+                        name="password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Create Account
+                </button>
+
+                <button type="button" class="btn btn-outline-secondary ms-2" data-view="login">
+                    Login Instead
+                </button>
+            </form>
+
+            <p class="small text-secondary mt-3 mb-0">
+                Prototype only. Account creation is not connected to a backend.
+            </p>
+        </div>
+    </div>
+</section>

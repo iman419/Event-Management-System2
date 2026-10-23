@@ -1,0 +1,54 @@
+
+<section id="admin-categories">
+    <h1>Manage Categories</h1>
+    <p class="text-secondary">Preview of the available event categories.</p>
+
+    <div class="card mt-4">
+        <div class="card-body p-4">
+            <h2 class="h5 mb-3">Existing Categories</h2>
+
+            <ul class="list-group mb-4">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Technology
+                    <span class="badge text-bg-primary">Example</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Education
+                    <span class="badge text-bg-primary">Example</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Music
+                    <span class="badge text-bg-primary">Example</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Community
+                    <span class="badge text-bg-primary">Example</span>
+                </li>
+            </ul>
+
+            <h2 class="h5">Add a Category</h2>
+
+            <form id="categoryForm">
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Category Name</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="categoryName"
+                        name="name"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add Category</button>
+                <button type="button" class="btn btn-outline-secondary ms-2" data-view="admin">
+                    Back to Admin
+                </button>
+            </form>
+
+            <p class="small text-secondary mt-3 mb-0">
+                Static preview only. Categories are not saved to a database.
+            </p>
+        </div>
+    </div>
+</section>

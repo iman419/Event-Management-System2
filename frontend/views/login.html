@@ -1,0 +1,45 @@
+
+<section id="login">
+    <h1>Login</h1>
+    <p class="text-secondary">Sign in to access your account.</p>
+
+    <div class="card mt-4" style="max-width: 520px;">
+        <div class="card-body p-4">
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email address</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="loginEmail"
+                        name="email"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="loginPassword"
+                        name="password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Login
+                </button>
+
+                <button type="button" class="btn btn-outline-secondary ms-2" data-view="register">
+                    Create Account
+                </button>
+            </form>
+
+            <p class="small text-secondary mt-3 mb-0">
+                Prototype only. Authentication is not connected to a backend.
+            </p>
+        </div>
+    </div>
+</section>

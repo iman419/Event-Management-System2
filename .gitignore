@@ -1,0 +1,21 @@
+
+# Secret configuration files
+backend/config/config.php
+backend/config/*.local.php
+
+# Log files
+backend/logs/*
+!backend/logs/.gitkeep
+
+# Dependencies
+vendor/
+backend/vendor/
+
+# Environment variables
+.env
+.env.*
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
