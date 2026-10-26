@@ -1,0 +1,70 @@
+
+<section id="admin-venues">
+    <h1>Manage Venues</h1>
+    <p class="text-secondary">Preview of the venues available for events.</p>
+
+    <div class="card mt-4">
+        <div class="card-body p-4">
+            <h2 class="h5 mb-3">Existing Venues</h2>
+
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>Venue</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Main Conference Hall</td>
+                            <td>To be announced</td>
+                            <td><span class="badge text-bg-secondary">Example</span></td>
+                        </tr>
+                        <tr>
+                            <td>Workshop Room</td>
+                            <td>To be announced</td>
+                            <td><span class="badge text-bg-secondary">Example</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="h5 mt-4">Add a Venue</h2>
+
+            <form id="venueForm">
+                <div class="mb-3">
+                    <label for="venueName" class="form-label">Venue Name</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="venueName"
+                        name="name"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="venueLocation" class="form-label">Location</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="venueLocation"
+                        name="location"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add Venue</button>
+                <button type="button" class="btn btn-outline-secondary ms-2" data-view="admin">
+                    Back to Admin
+                </button>
+            </form>
+
+            <p class="small text-secondary mt-3 mb-0">
+                Static preview only. Venues are not saved to a database.
+            </p>
+        </div>
+    </div>
+</section>
