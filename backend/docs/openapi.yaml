@@ -1,0 +1,411 @@
+openapi: 3.0.3
+info:
+  title: Event Management System API
+  description: REST API for managing events, users, venues, categories, registrations, reviews and public holidays.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+    description: Local development server
+
+tags:
+  - name: Users
+  - name: Events
+  - name: Venues
+  - name: Categories
+  - name: Registrations
+  - name: Reviews
+  - name: External API
+
+paths:
+  /users:
+    get:
+      tags: [Users]
+      summary: Get all users
+      responses:
+        '200':
+          description: Users retrieved successfully
+    post:
+      tags: [Users]
+      summary: Create a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: User created
+        '400':
+          description: Invalid input
+
+  /users/{id}:
+    get:
+      tags: [Users]
+      summary: Get user by ID
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: User retrieved
+        '404':
+          description: User not found
+    put:
+      tags: [Users]
+      summary: Update user
+      parameters:
+        - $ref: '#/components/parameters/id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: User updated
+        '404':
+          description: User not found
+    delete:
+      tags: [Users]
+      summary: Delete user
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: User deleted
+        '404':
+          description: User not found
+
+  /events:
+    get:
+      tags: [Events]
+      summary: Get all events
+      responses:
+        '200':
+          description: Events retrieved successfully
+    post:
+      tags: [Events]
+      summary: Create an event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Event created
+        '400':
+          description: Invalid input
+
+  /events/{id}:
+    get:
+      tags: [Events]
+      summary: Get event by ID
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Event retrieved
+        '404':
+          description: Event not found
+    put:
+      tags: [Events]
+      summary: Update event
+      parameters:
+        - $ref: '#/components/parameters/id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Event updated
+        '404':
+          description: Event not found
+    delete:
+      tags: [Events]
+      summary: Delete event
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Event deleted
+        '404':
+          description: Event not found
+
+  /venues:
+    get:
+      tags: [Venues]
+      summary: Get all venues
+      responses:
+        '200':
+          description: Venues retrieved successfully
+    post:
+      tags: [Venues]
+      summary: Create a venue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Venue created
+        '400':
+          description: Invalid input
+
+  /venues/{id}:
+    get:
+      tags: [Venues]
+      summary: Get venue by ID
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Venue retrieved
+        '404':
+          description: Venue not found
+    put:
+      tags: [Venues]
+      summary: Update venue
+      parameters:
+        - $ref: '#/components/parameters/id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Venue updated
+        '404':
+          description: Venue not found
+    delete:
+      tags: [Venues]
+      summary: Delete venue
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Venue deleted
+        '404':
+          description: Venue not found
+
+  /categories:
+    get:
+      tags: [Categories]
+      summary: Get all categories
+      responses:
+        '200':
+          description: Categories retrieved successfully
+    post:
+      tags: [Categories]
+      summary: Create a category
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Category created
+        '400':
+          description: Invalid input
+
+  /categories/{id}:
+    get:
+      tags: [Categories]
+      summary: Get category by ID
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Category retrieved
+        '404':
+          description: Category not found
+    put:
+      tags: [Categories]
+      summary: Update category
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Category updated
+        '404':
+          description: Category not found
+    delete:
+      tags: [Categories]
+      summary: Delete category
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Category deleted
+        '404':
+          description: Category not found
+
+  /registrations:
+    get:
+      tags: [Registrations]
+      summary: Get all registrations
+      responses:
+        '200':
+          description: Registrations retrieved successfully
+    post:
+      tags: [Registrations]
+      summary: Create a registration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Registration created
+        '400':
+          description: Invalid input
+
+  /registrations/{id}:
+    get:
+      tags: [Registrations]
+      summary: Get registration by ID
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Registration retrieved
+        '404':
+          description: Registration not found
+    put:
+      tags: [Registrations]
+      summary: Update registration
+      parameters:
+        - $ref: '#/components/parameters/id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Registration updated
+        '404':
+          description: Registration not found
+    delete:
+      tags: [Registrations]
+      summary: Delete registration
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Registration deleted
+        '404':
+          description: Registration not found
+
+  /reviews:
+    get:
+      tags: [Reviews]
+      summary: Get all reviews
+      responses:
+        '200':
+          description: Reviews retrieved successfully
+    post:
+      tags: [Reviews]
+      summary: Create a review
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Review created
+        '400':
+          description: Invalid input
+
+  /reviews/{id}:
+    get:
+      tags: [Reviews]
+      summary: Get review by ID
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Review retrieved
+        '404':
+          description: Review not found
+    put:
+      tags: [Reviews]
+      summary: Update review
+      parameters:
+        - $ref: '#/components/parameters/id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Review updated
+        '404':
+          description: Review not found
+    delete:
+      tags: [Reviews]
+      summary: Delete review
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: Review deleted
+        '404':
+          description: Review not found
+
+  /holidays/{year}:
+    get:
+      tags: [External API]
+      summary: Get public holidays for Bosnia and Herzegovina
+      description: Retrieves public holidays for a given year using the Nager.Date external API.
+      parameters:
+        - name: year
+          in: path
+          required: true
+          description: Year for which public holidays are retrieved
+          schema:
+            type: integer
+            minimum: 2000
+            maximum: 2100
+      responses:
+        '200':
+          description: Holidays retrieved successfully
+        '400':
+          description: Invalid year
+        '502':
+          description: External API unavailable
+
+components:
+  parameters:
+    id:
+      name: id
+      in: path
+      required: true
+      description: Entity ID
+      schema:
+        type: integer
